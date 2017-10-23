@@ -46,8 +46,6 @@ input[type="submit"] {
 // Labels
 //---------------------------------------------- 
 label {
-  @extend %font-header;
-
   display: block;
 
   font-size: $font-small;

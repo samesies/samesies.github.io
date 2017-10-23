@@ -1,0 +1,29 @@
+//----------------------------------------------
+// Half
+//---------------------------------------------- 
+.half {
+  display: flex;
+
+  & > * {
+    flex-basis: 50%;
+    max-width: 50%;
+
+    &:first-child {
+      background-color: $color-black;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__img {
+
+    img {
+      @extend %auto-margin;
+
+      display: block;
+      max-height: ($mq-small + $mq-xsmall) / 2;
+    }
+  }
+}

@@ -52,12 +52,13 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %font-header;
-
   margin: {
     top: 0;
     bottom: 0;
   }
+
+  font-family: $font;
+  font-weight: 500;
 }
 
 //----------------------------------------------
@@ -93,10 +94,10 @@ blockquote {
 }
 
 cite {
-  @extend %font-header;
-
   display: block;
 
+  font-family: $font;
+  font-weight: 500;
   font-size: $font-xxxsmall;
   font-style: normal;
   color: $color-black;

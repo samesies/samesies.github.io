@@ -2,56 +2,14 @@
 // Footer
 //---------------------------------------------- 
 .footer {
-  padding-top: 2em;
+  padding: 2em 1em;
 
-  border-top: $border;
+  background-color: $color-lightgrey;
 
-  &__container {
-    margin-top: 3em;
-  }
-
-  &__text {
-    @extend %text-center;
-
-    margin-bottom: 2em;
-  }
-
-  &__tags {
-    @extend %flex-center;
-    @extend %no-list-style;
-
-    flex-wrap: wrap;
-
-    & > *:not(:last-child) {
-      margin-right: 1em;
-    }
-  }
-
-  &__link {
-    font-size: $font-small;
-    color: $color-grey;
-    transition: color 200ms ease-in-out;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-black;
-    }
-  }
-
-  &__social {
-    @extend %flex-center;
-    @extend %no-list-style;
-
-    margin-top: 2em;
-
-    & > *:not(:last-child) {
-      margin-right: 0.75em;
-    }
-
-    a {
-      font-size: 1.25em;
-      color: $color-darkgrey;
+  @media (min-width: $mq-small) {
+    padding: {
+      right: 2em;
+      left: 2em;
     }
   }
 }
@@ -65,7 +23,6 @@
 //   min-height: 100vh;
 // }
 
-main {
-  // flex-grow: 1;
-  margin-top: $header-height;
-}
+// main {
+//   flex-grow: 1;
+// }

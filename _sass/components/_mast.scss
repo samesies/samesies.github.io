@@ -1,0 +1,21 @@
+//----------------------------------------------
+// Mast
+//---------------------------------------------- 
+.mast {
+  padding: 2em 1em;
+
+  @media (min-width: $mq-small) {
+    padding: {
+      right: 2em;
+      left: 2em;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    margin-bottom: 0;
+
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+}

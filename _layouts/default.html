@@ -3,11 +3,11 @@
 
   {% include head.html %}
 
-  <body id="{% if page.title %}{{ page.title | downcase }}{% else %}home{% endif %}" class="⬛">
+  <body id="{% if page.title %}{{ page.title | downcase }}{% else %}home{% endif %}">
     
     {% include header.html %}
 
-    <main>
+    <main class="⬛">
       {{ content }}
     </main>
 

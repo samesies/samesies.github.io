@@ -1,0 +1,21 @@
+//----------------------------------------------
+// Featured
+//---------------------------------------------- 
+.featured {
+  background-color: $color-lightgrey;
+
+  &__link {
+    display: block;
+  }
+
+  &__img {
+
+    img {
+      @extend %auto-margin;
+
+      display: block;
+      width: 100%;
+      max-width: $mq-med;
+    }
+  }
+}

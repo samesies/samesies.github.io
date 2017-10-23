@@ -2,26 +2,9 @@
 // Header
 //---------------------------------------------- 
 .header {
-  @extend %letter-spacing;
-  @extend %box-shadow;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: $z-999;
-
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: $header-height;
   width: 100%;
-  padding: {
-    right: 1em;
-    left: 1em;
-  }
-
-  background-color: $color-white;
-  border-bottom: $border;
+  padding: 1em;
 
   @media (min-width: $mq-small) {
     padding: {
@@ -30,11 +13,9 @@
     }
   }
 
-  &__title {
-    @extend %font-header;
-
-    font-size: $font-xsmall;
-    color: $color-black;
+  & > * {
+    flex-basis: 50%;
+    max-width: 50%;
   }
 
   &__list {
@@ -44,14 +25,9 @@
     align-items: center;
 
     & > * {
-      @extend .header__title;
 
       &:not(:last-child) {
-        margin-right: 1em;
-
-        @media (min-width: $mq-small) {
-          margin-right: 2em;
-        }
+        margin-right: 1.5em;
       }
 
       a {
