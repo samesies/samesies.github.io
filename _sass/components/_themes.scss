@@ -1,0 +1,56 @@
+//----------------------------------------------
+// Themes
+//---------------------------------------------- 
+.themes {
+  margin-bottom: 2em;
+
+  @media (min-width: $mq-small) {
+    margin-bottom: 3em;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    margin-bottom: 4em;
+  }
+
+  &__theme {
+
+  }
+
+  &__link {
+    display: block;
+
+    color: $color-black;
+  }
+
+  &__title {
+    @extend %text-center;
+
+    font-size: 1.5em;
+  }
+
+  &__container {
+    margin: {
+      top: 1em;
+      bottom: 2em;
+    }
+    padding: 4em;
+
+    background-color: $color-lightgrey;
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__text {
+    @extend %auto-margin;
+
+    width: 65%;
+    margin-bottom: 0;
+
+    font-size: 1.35em;
+  }
+}

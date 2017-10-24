@@ -12,12 +12,12 @@ section {
     padding: 6em 2em;
   }
 
-  @media (min-width: $mq-med) {
-    padding: {
-      right: 1em;
-      left: 1em;
-    }
-  }
+  // @media (min-width: $mq-med) {
+  //   padding: {
+  //     right: 1em;
+  //     left: 1em;
+  //   }
+  // }
 
   @media (min-width: $mq-xlarge) {
     padding: {
@@ -97,10 +97,6 @@ section {
   @media (min-width: $mq-med) {
     width: 50%;
   }
-
-  // @media (min-width: $mq-xlarge) {
-  //   width: 50%;
-  // }
 }
 
 .grid-large {
