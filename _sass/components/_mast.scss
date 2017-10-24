@@ -11,11 +11,23 @@
     }
   }
 
+  @media (min-width: $mq-xlarge) {
+    padding: {
+      top: 4em;
+      bottom: 4em;
+    }
+  }
+
   &__text {
     width: 50%;
     margin-bottom: 0;
+    padding-right: 0.5em;
 
     font-size: 1.5em;
     font-weight: 500;
+
+    @media (min-width: $mq-xlarge) {
+      font-size: 1.75em;
+    }
   }
 }
