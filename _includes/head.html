@@ -28,11 +28,11 @@
   <meta property="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.default_img }}{% endif %}">
 
   <!-- Favicons --> 
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="{% asset_path favicon.ico %}">
 
   <!-- CSS-->
-  <link rel="stylesheet" href="{{ '/assets/css/fonts.min.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/assets/css/app.min.css' | prepend: site.baseurl }}">
+  {% stylesheet fonts %}
+  {% stylesheet app %}
 
   <!-- Feed -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
