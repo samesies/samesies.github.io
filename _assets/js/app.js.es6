@@ -1,62 +1,24 @@
-var PageTransition = (function() {
-  var s,
-      noTransition = 'no-transition';
+// ----------------------------------------------
+// Requires
+// ----------------------------------------------
+//= require components/_pageTransition
+//= require vendor/_tinySlider
 
-  return {
-    settings() {
-      return {
-        transitionLinks: document.querySelectorAll('a[href^="http://' + top.location.host.toString() + '"]:not(' + noTransition + '), a[href^="/"]:not(' + noTransition + '), a[href^="./"]:not(' + noTransition + '), a[href^="../"]:not(' + noTransition + ')'),
-        body: document.body,
-        exit: 400,
-        entrance: 200
-      };
-    },
+// ----------------------------------------------
+// Inits
+// ----------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
 
-    init() {
-      if (window === window.top) {
-        s = this.settings();
-        this.bindEvents();
-      } else {
-        setTimeout(function() {
-          document.body.classList.add('js-page-loaded');
-        }, 600);
-      }
-    },
+  // Tiny Slider
+  const slider = tns({
+    container: document.querySelector('.tns'),
+    controls: false,
+    nav: false,
+    speed: 500,
+    autoplay: true,
+    touch: false
+  });
 
-    bindEvents() {
-      this.loadingClasses();
-      this.transitionPage();
-    },
-
-    loadingClasses() {
-      setTimeout(function() {
-        s.body.classList.add('js-page-loaded');
-      }, s.entrance);
-    },
-
-    transitionPage() {
-      [].forEach.call(s.transitionLinks, function(link) {
-        link.addEventListener('click', function(e) {
-          if (s.body.classList.contains(noTransition) || e.metaKey || e.ctrlKey || e.shiftKey) {
-            return;
-          }
-          e.preventDefault();
-
-          var linkLocation = link.href;
-
-          s.body.classList.add('js-page-exiting');
-
-          setTimeout(function() {
-            window.location = linkLocation;
-          }, s.exit);
-        });
-      });
-    }
-  };
-})();
-
-document.addEventListener('DOMContentLoaded', function() {
-
+  // Inits
   PageTransition.init();
-
 });

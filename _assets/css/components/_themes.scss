@@ -33,6 +33,9 @@
       top: 1em;
       bottom: 2em;
     }
+  }
+
+  &__subcontainer {
     padding: 4em;
 
     background-color: $color-lightgrey;
@@ -41,7 +44,10 @@
   &__img {
 
     img {
+      @extend %auto-margin;
+      
       display: block;
+      max-height: 20em;
     }
   }
 

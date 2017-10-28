@@ -1,12 +1,22 @@
 ---
 layout: default
 ---
-<article>
+<!-- Mast -->
+<section class="mast">
+  <p class="mast__text">{{ page.description }}</p>
+</section>
 
+<!-- Image -->
+<section class="image">
+  <figure class="image__img">
+    <img src="{% asset_path '{{ page.image }}' %}" alt=""/>
+  </figure>
+</section>
+
+<article>
   <section class="section-padding">
     <div class="grid">
       {{ content }}
     </div>
   </section>
-
 </article>

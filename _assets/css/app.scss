@@ -47,6 +47,7 @@
 //----------------------------------------------   
 // Vendor
 //----------------------------------------------  
+@import 'vendor/_tiny-slider';
 
 //----------------------------------------------
 // Regions
@@ -59,6 +60,7 @@
 //---------------------------------------------- 
 @import 'components/_featured';
 @import 'components/_half';
+@import 'components/_image';
 @import 'components/_mast';
 @import 'components/_themes';
 
@@ -67,5 +69,6 @@
 //---------------------------------------------- 
 @import 'utils/_animations-keyframes';
 @import 'utils/_decor';
+@import 'utils/_helpers-color';
 @import 'utils/_helpers-grid';
 @import 'utils/_page-transitions';
