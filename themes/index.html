@@ -18,8 +18,17 @@ image:
       <article>
         <a class="themes__link" href="{{ theme.url | prepend: site.baseurl }}">
           <h2 class="themes__title">{{ theme.title }}</h2>
-          <div class="{% if theme.images.size > 1 %}tns{% endif %}">
+          <div class="themes__slider {% if theme.images.size > 1 %}tns{% endif %}">
             {% for image in theme.images %}
+              <div class="themes__subcontainer">
+                <figure class="themes__img">
+                  <img src="{{ image }}" alt=""/>
+                </figure>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="themes__mobile">
+            {% for image in theme.images limit:1 %}
               <div class="themes__subcontainer">
                 <figure class="themes__img">
                   <img src="{{ image }}" alt=""/>

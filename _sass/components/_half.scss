@@ -2,15 +2,21 @@
 // Half
 //---------------------------------------------- 
 .half {
-  display: flex;
+
+  @media (min-width: $mq-med) {
+    display: flex;
+  }
 
   &.half--reverse {
     flex-direction: row-reverse;
   }
 
   & > * {
-    flex-basis: 50%;
-    max-width: 50%;
+
+    @media (min-width: $mq-med) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
 
     &:first-child {
       background-color: $color-black;
@@ -27,7 +33,11 @@
       @extend %auto-margin;
 
       display: block;
-      max-height: ($mq-small + $mq-xsmall) / 2;
+      max-height: $mq-xsmall;
+
+      @media (min-width: $mq-med) {
+        max-height: ($mq-small + $mq-xsmall) / 2;
+      }
     }
   }
 

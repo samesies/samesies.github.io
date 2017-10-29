@@ -25,9 +25,27 @@
   }
 
   &__subcontainer {
-    padding: 4em;
+    padding: 2em;
 
     background-color: $color-lightgrey;
+
+    @media (min-width: $mq-small) {
+      padding: 4em;
+    }
+  }
+
+  &__slider {
+
+    @media (max-width: $mq-small) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+
+    @media (min-width: $mq-small) {
+      display: none;
+    }
   }
 
   &__img {
@@ -41,15 +59,23 @@
   }
 
   &__content {
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   &__text {
     @extend %auto-margin;
 
-    width: 65%;
+    width: 95%;
     margin-bottom: 0;
 
     font-size: 1.35em;
+
+    @media (min-width: $mq-small) {
+      width: 80%;
+    }
+
+    @media (min-width: $mq-med) {
+      width: 65%;
+    }
   }
 }

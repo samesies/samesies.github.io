@@ -5,9 +5,12 @@
   @extend .mast;
 
   &__container {
-    width: 50%;
-    margin-left: 50%;
-    padding-left: 0.5em;
+
+    @media (min-width: $mq-small) {
+      width: 50%;
+      margin-left: 50%;
+      padding-left: 0.5em;
+    }
   }
 
   &__subcontainer {

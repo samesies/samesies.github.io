@@ -19,12 +19,21 @@
   }
 
   &__text {
-    width: 50%;
     margin-bottom: 0;
-    padding-right: 0.5em;
 
-    font-size: 1.5em;
+    font-size: 1.35em;
     font-weight: 500;
+
+    @media (min-width: $mq-small) {
+      width: 75%;
+
+      font-size: 1.5em;
+    }
+
+    @media (min-width: $mq-med) {
+      width: 50%;
+      padding-right: 0.5em;
+    }
 
     @media (min-width: $mq-xlarge) {
       font-size: 1.75em;

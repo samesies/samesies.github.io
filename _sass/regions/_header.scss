@@ -6,6 +6,14 @@
   width: 100%;
   padding: 1em;
 
+  @media (max-width: $mq-small) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $mq-med) {
+    justify-content: space-between;
+  }
+
   @media (min-width: $mq-small) {
     padding: {
       right: 2em;
@@ -14,22 +22,36 @@
   }
 
   & > * {
-    display: flex;
-    flex-basis: 50%;
-    max-width: 50%;
 
-    &:first-child {
-      padding-right: 0.5em;
+    @media (max-width: $mq-small) {
+
+      &:last-child {
+        padding-top: 0.5em;
+      }
     }
+    
+    @media (min-width: $mq-med) {
+      flex-basis: 50%;
+      max-width: 50%;
 
-    &:last-child {
-      padding-left: 0.5em;
+      &:first-child {
+        padding-right: 0.5em;
+      }
+
+      &:last-child {
+        padding-left: 0.5em;
+      }
     }
   }
 
   &__img {
-    height: 4em;
-    width: 4em;
+    height: 3em;
+    width: 3em;
+
+    @media (min-width: $mq-small) {
+      height: 4em;
+      width: 4em;
+    }
 
     img {
       display: block;
@@ -45,7 +67,11 @@
     & > * {
 
       &:not(:last-child) {
-        margin-right: 1.5em;
+        margin-right: 1em;
+
+        @media (min-width: $mq-small) {
+          margin-right: 1.5em;
+        }
       }
     }
   }
