@@ -41,11 +41,19 @@
       padding: 6em 2em;
     }
 
-    @media (min-width: $mq-xlarge) {
+    @media (min-width: $mq-med) {
       padding: {
-        top: 8em;
-        bottom: 8em;
+        right: 3em;
+        left: 3em;
       }
+    }
+
+    @media (min-width: $mq-xlarge) {
+      // padding: {
+      //   top: 8em;
+      //   bottom: 8em;
+      // }
+      padding: 8em 4em;
     }
   }
 
@@ -55,6 +63,6 @@
       bottom: 0;
     }
 
-    font-size: 1.5em;
+    font-size: 1.35em;
   }
 }

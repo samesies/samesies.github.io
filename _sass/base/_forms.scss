@@ -1,67 +1,67 @@
-//----------------------------------------------
-// Forms
-//---------------------------------------------- 
-form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+// //----------------------------------------------
+// // Forms
+// //---------------------------------------------- 
+// form {
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+// }
 
-//----------------------------------------------
-// Inputs
-//---------------------------------------------- 
-input,
-textarea {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 0.75em 0.5em;
+// //----------------------------------------------
+// // Inputs
+// //---------------------------------------------- 
+// input,
+// textarea {
+//   display: block;
+//   width: 100%;
+//   max-width: 100%;
+//   padding: 0.75em 0.5em;
 
-  font-family: $font;
-  font-size: $font-small;
-  font-weight: 400;
-  color: $color-black;
-  background: transparent;
-  border: 2px solid rgba($color-black, 0.6);
-  border-radius: 0;
-  box-shadow: none;
-  outline: 0;
-  -webkit-appearance: none;
-  transition: border-color 200ms ease-in-out;
+//   font-family: $font;
+//   font-size: $font-small;
+//   font-weight: 400;
+//   color: $color-black;
+//   background: transparent;
+//   border: 2px solid rgba($color-black, 0.6);
+//   border-radius: 0;
+//   box-shadow: none;
+//   outline: 0;
+//   -webkit-appearance: none;
+//   transition: border-color 200ms ease-in-out;
 
-  &:hover,
-  &:focus {
-    border-color: $color-black;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     border-color: $color-black;
+//   }
+// }
 
-input[type="submit"] {
-  position: relative;
-  z-index: $z-1;
+// input[type="submit"] {
+//   position: relative;
+//   z-index: $z-1;
 
-  cursor: pointer;
-}
+//   cursor: pointer;
+// }
 
-//----------------------------------------------
-// Labels
-//---------------------------------------------- 
-label {
-  display: block;
+// //----------------------------------------------
+// // Labels
+// //---------------------------------------------- 
+// label {
+//   display: block;
 
-  font-size: $font-small;
-}
+//   font-size: $font-small;
+// }
 
-//----------------------------------------------
-// Misc
-//---------------------------------------------- 
-.form-group {
-  width: 45%;
-  margin-right: 0.5em;
-}
+// //----------------------------------------------
+// // Misc
+// //---------------------------------------------- 
+// .form-group {
+//   width: 45%;
+//   margin-right: 0.5em;
+// }
 
-//----------------------------------------------
-// Placeholders
-//---------------------------------------------- 
-::placeholder {
-  color: $color-grey;
-}
+// //----------------------------------------------
+// // Placeholders
+// //---------------------------------------------- 
+// ::placeholder {
+//   color: $color-grey;
+// }

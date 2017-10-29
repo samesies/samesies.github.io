@@ -1,0 +1,25 @@
+//----------------------------------------------
+// About
+//---------------------------------------------- 
+.about {
+
+  &__container {
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1.35em;
+    }
+
+    a {
+      color: $color-darkgrey;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $color-black;
+      }
+    }
+  }
+}

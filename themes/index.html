@@ -8,17 +8,17 @@ image:
 
 <!-- Mast -->
 <section class="mast">
-  <p class="mast__text">Samesies is a williamsburg art party artisan vinyl food truck four loko XOXO synth palo santo.</p>
+  <p class="mast__text">Samesies is working hard to publish additional themes. Here is what we have to offer for now.</p>
 </section>
 
 <!-- Themes -->
 <section class="themes section-padding--half">
   <div class="grid">
     {% for theme in themes %}
-      <article class="themes__theme">
+      <article>
         <a class="themes__link" href="{{ theme.url | prepend: site.baseurl }}">
           <h2 class="themes__title">{{ theme.title }}</h2>
-          <div class="themes__container {% if theme.images.size > 1 %}tns{% endif %}">
+          <div class="{% if theme.images.size > 1 %}tns{% endif %}">
             {% for image in theme.images %}
               <div class="themes__subcontainer">
                 <figure class="themes__img">
@@ -27,7 +27,7 @@ image:
               </div>
             {% endfor %}
           </div>
-          <div>
+          <div class="themes__content">
             <p class="themes__text">{{ theme.description }}</p>
           </div>
         </a>

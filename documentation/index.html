@@ -8,14 +8,14 @@ image:
 
 <!-- Mast -->
 <section class="mast">
-  <p class="mast__text">Samesies is a williamsburg art party artisan vinyl food truck four loko XOXO synth palo santo.</p>
+  <p class="mast__text">We want you to get your website online as quickly and as painlessly as possible. Samesies has all the documentation available to you before you make any purchase.</p>
 </section>
 
 <!-- Half Theme -->
 {% for doc in documentation %}
   <section class="half {% cycle '', 'half--reverse' %}">
     <div>
-      <a class="half__link section-padding--half" href="{{ '/documentation/barber' | prepend: site.baseurl }}">
+      <a class="half__link section-padding--half" href="{{ doc.url | prepend: site.baseurl }}">
         <figure class="half__img">
           <img src="/assets/images/barber/device/stories-mobile-white.png" alt=""/>
         </figure>
@@ -24,6 +24,9 @@ image:
     <div class="half__content">
       <h2>{{ doc.title }}</h2>
       <p class="half__text">{{ doc.description }}</p>
+      <span>
+        <a class="btn" href="{{ doc.url | prepend: site.baseurl }}">Read Docs</a>
+      </span>
     </div>
   </section>
 {% endfor %}

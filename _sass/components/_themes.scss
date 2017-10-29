@@ -12,10 +12,6 @@
     margin-bottom: 4em;
   }
 
-  &__theme {
-
-  }
-
   &__link {
     display: block;
 
@@ -24,13 +20,8 @@
 
   &__title {
     @extend %text-center;
-  }
 
-  &__container {
-    margin: {
-      top: 1em;
-      bottom: 2em;
-    }
+    margin-bottom: 0.5em;
   }
 
   &__subcontainer {
@@ -47,6 +38,10 @@
       display: block;
       max-height: 20em;
     }
+  }
+
+  &__content {
+    margin-top: 2em;
   }
 
   &__text {
