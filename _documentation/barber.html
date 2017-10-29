@@ -22,7 +22,7 @@ external:
           <a class="directory__link" href="#enable-beta-features">Enable Beta Features</a>
         </li>
         <li>
-          <a class="directory__link" href="#update-favicon">Update Favicon</a>
+          <a class="directory__link" href="#update-settings">Update Settings</a>
         </li>
         <li>
           <a class="directory__link" href="#create-static-pages">Create Static Pages</a>
@@ -65,22 +65,26 @@ external:
   <div class="grid">
     <div id="installation" class="post-doc__container">
       <h3 class="post-doc__title">Installation</h3>
+      <p>Ghost requires the theme to be uploaded in a <code>.zip</code> file. You will need to do this whenever you make any edit to the source code. You can run <code>gulp zip</code> in your command line to generate this file without all the extra folders Ghost does not need (see <a href="#source-code">Source Code</a> for more information about Gulp).</p>
+      {% include screen.html image="barber/doc/installation.jpg" %}
     </div>
     <div id="enable-beta-features" class="post-doc__container">
       <h3 class="post-doc__title">Enable Beta Features</h3>
       <p>Barber uses a couple of features that are still in beta testing. You must activate the <strong>Public API</strong> and the <strong>Subscribers</strong> features. These features make tag pages, endless scrolling, and a subscription list possible.</p>
-      {% include screen.html image="barber/cropped/stories-notebook.jpg" %}
+      {% include screen.html image="barber/doc/beta-features.jpg" %}
     </div>
     <div id="update-favicon" class="post-doc__container">
-      <h3 class="post-doc__title">Update Favicon</h3>
+      <h3 class="post-doc__title">Update Settings</h3>
+      {% include screen.html image="barber/doc/update-settings.jpg" %}
     </div>
     <div id="create-static-pages" class="post-doc__container">
       <h3 class="post-doc__title">Create Static Pages</h3>
-      {% include screen.html image="barber/cropped/stories-notebook.jpg" %}
+      <p>Creating a static page is the same as creating a story. The only difference is before the story is published it is turned into a page by selecting the checkbox at the very bottom of the post settings.
+      {% include screen.html image="barber/doc/static-pages.jpg" %}
     </div>
     <div id="create-navigation" class="post-doc__container">
       <h3 class="post-doc__title">Create Navigation</h3>
-      {% include screen.html image="barber/cropped/stories-notebook.jpg" %}
+      <p>You can create a navigation under the Design Settings. Visitors can be linked directly to static pages right on the top of your website.</p>
     </div>
   </div>
 </section>
@@ -90,7 +94,7 @@ external:
   <div class="grid">
     <div id="contact-form" class="post-doc__container">
       <h3 class="post-doc__title">Contact Form</h3>
-      <p>Once you have created a static page for Contact and navigated to it you will see a form. The form uses <a href="#" target="_blank">Formspree</a> to send submitted messages straight to your email.</p>
+      <p>Once you have created a static page for Contact and navigated to it you will see a form. The form uses <a href="https://formspree.io/" target="_blank">Formspree</a> to send submitted messages straight to your email.</p>
 
       {% include screen.html image="barber/cropped/contact-notebook.jpg" %}
 
@@ -102,7 +106,7 @@ external:
     </div>
     <div id="disqus-comments" class="post-doc__container">
       <h3 class="post-doc__title">Disqus Comments</h3>
-      <p>Comments can be enabled on every blog post in three steps. The first step is to register your website with <a href="#" target="_blank">Disqus</a>. Disqus will provide you with a shortname that you need for the next step. Once you have that the second step is to open <code>partials/disqus.hbs</code>, remove all the instructions, and paste in your shortcode where the placeholder one currently is. The third step is to visit a blog post and verify that your comments are there.</p>
+      <p>Comments can be enabled on every blog post in three steps. The first step is to register your website with <a href="https://disqus.com/" target="_blank">Disqus</a>. Disqus will provide you with a shortname that you need for the next step. Once you have that the second step is to open <code>partials/disqus.hbs</code>, remove all the instructions, and paste in your shortcode where the placeholder one currently is. The third step is to visit a blog post and verify that your comments are there.</p>
     </div>
   </div>
 </section>
@@ -112,9 +116,64 @@ external:
   <div class="grid">
     <div id="source-code" class="post-doc__container">
       <h3 class="post-doc__title">Source Code</h3>
+      <p>The source code is broken down to make finding what you need as easy as possible. Almost everything runs through <code>gulpfile.js</code>, so you will need to run <code>npm install</code> on your command line before doing any additional development. You can then run <code>gulp</code> or <code>npm start</code> to compile everything.
+      <pre>
+        <code>
+.
+├── assets
+    └── js
+├── partials
+|   ├── disqus.hbs
+|   ├── footer.hbs
+|   ├── formspree.hbs
+|   ├── head.hbs
+|   ├── header.hbs
+|   ├── navigation.hbs
+|   ├── pagination.hbs
+|   ├── post-card.hbs
+|   ├── share.hbs
+|   ├── social.hbs
+|   ├── styles-amp.hbs
+|   ├── styles-app.hbs
+|   └── subscribe_form.hbs
+├── src
+|   ├── js
+|       ├── components
+|       ├── vendor
+|       └── _init.js
+|   └── scss
+|       ├── base
+|       ├── components
+|       ├── fonts
+|       ├── regions
+|       ├── tools
+|       ├── utils
+|       ├── vendor
+|       ├── amp.scss
+|       └── app.scss
+├── .eslintrc
+├── .gitignore
+├── .stylelintrc
+├── amp.hbs
+├── author.hbs
+├── default.hbs
+├── error-404.hbs
+├── error.hbs
+├── gulpfile.js
+├── index.hbs
+├── package.json
+├── page-contact.hbs
+├── page.hbs
+├── post.hbs
+├── subscribe.hbs
+└── tag.hbs
+        </code>
+      </pre>
+      <p>The CSS is written in Sass and compiled in two different files. One for the whole website and one for Google AMP pages. The JavaScript is written in ES6, so your code is up to date with the newest standards. This theme does not have jQuery, so you are saving every visitor from downloading that script.</p>
     </div>
     <div id="support" class="post-doc__container">
       <h3 class="post-doc__title">Support</h3>
+      <p>Email <a href="mailto:okay@samesies.io">okay@samesies.io</a> if you need any support with Barber.</p>
     </div>
   </div>
 </section>
