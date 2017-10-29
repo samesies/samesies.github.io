@@ -6,10 +6,10 @@ google_analytics:
 name: Thomas Vaeth
 title: Samesies
 description: >
-  Thomas Vaeth is a Software Engineer at Getty Images in Seattle, Washington.
+  Samesies is a web development agency started by Thomas Vaeth and based in Seattle, WA. We create minimal themes for Ghost, Jekyll, and WordPress. 👨‍💻👩‍💻
 url: "http://samesies.io"
 twitter_username: thomasvaeth
-default_img: https://source.unsplash.com/oBb-Y26PJgg/1600x900
+default_img: http://samesies.io/assets/images/seo.jpg
 
 # Build settings
 markdown: kramdown
