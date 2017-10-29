@@ -19,7 +19,13 @@
   }
 
   &__link {
-    @include strikethrough();
+    color: $color-black;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-alpha;
+    }
   }
 }
 

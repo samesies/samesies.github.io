@@ -20,6 +20,8 @@ sass:
   style: compressed
 exclude:
   - node_modules
+  - .DS_Store
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - gulpfile.js
