@@ -1,5 +1,5 @@
 # Site settings
-email: thomas.vaeth@gmail.com
+email: okay@samesies.io
 baseurl: ""
 google_analytics: 
 
@@ -9,11 +9,12 @@ description: >
   Thomas Vaeth is a Software Engineer at Getty Images in Seattle, Washington.
 url: "http://samesies.io"
 twitter_username: thomasvaeth
-default_img: 
+default_img: https://source.unsplash.com/oBb-Y26PJgg/1600x900
 
 # Build settings
 markdown: kramdown
 gems:
+  - jekyll-assets
   - jekyll-sitemap
 assets:
   autoprefixer:
