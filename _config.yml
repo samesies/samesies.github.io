@@ -1,7 +1,7 @@
 # Site settings
 email: okay@samesies.io
 baseurl: ""
-google_analytics: 
+google_analytics: UA-108910009-1
 
 name: Thomas Vaeth
 title: Samesies
