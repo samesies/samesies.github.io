@@ -1,4 +1,39 @@
 //---------------------------------------------- 
+//  Strikethrough - strikethrough()
+//  @description: Creates a strikethrough animation for links
+//  @param:       $color - Color
+//  @param:       $bgColor - Background color
+//----------------------------------------------
+@mixin strikethrough($color: $color-black, $bgColor: $color-alpha) {
+  position: relative;
+
+  color: $color;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    height: 2px;
+    width: 100%;
+
+    background-color: $bgColor;
+    transform: scaleX(0);
+    transform-origin: center right;
+    transition: transform 300ms ease-in-out;
+  }
+
+  &:hover {
+
+    &:after {
+      transform-origin: center left;
+      transform: scaleX(1);
+    }
+  }
+}
+
+//---------------------------------------------- 
 //  Button Split - btn-split()
 //  @description: Creates a button that has a splitting border effect
 //  @param:       $color - Color

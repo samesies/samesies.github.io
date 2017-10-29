@@ -1,0 +1,36 @@
+//----------------------------------------------
+// Directory
+//---------------------------------------------- 
+.directory {
+  @extend .mast;
+
+  &__container {
+    width: 50%;
+    margin-left: 50%;
+    padding-left: 0.5em;
+  }
+
+  &__subcontainer {
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+
+  &__list {
+    @extend %no-list-style;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 1.25em;
+    color: $color-darkgrey;
+    transition: color 200ms ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-black;
+    }
+  }
+}

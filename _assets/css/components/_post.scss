@@ -11,3 +11,37 @@
     font-size: 1.5em;
   }
 }
+
+//----------------------------------------------
+// Post Doc
+//---------------------------------------------- 
+.post-doc {
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($color-black, 0.1);
+  }
+
+  .screen {
+    margin: {
+      top: 1.5em;
+      bottom: 1.5em;
+    }
+  }
+
+  &__container {
+
+    &:not(:last-child) {
+      margin-bottom: 3em;
+    }
+
+    p {
+      margin-bottom: 0;
+
+      font-size: 1.25em;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.25em;
+  }
+}

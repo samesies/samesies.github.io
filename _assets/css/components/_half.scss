@@ -4,6 +4,10 @@
 .half {
   display: flex;
 
+  &.half--reverse {
+    flex-direction: row-reverse;
+  }
+
   & > * {
     flex-basis: 50%;
     max-width: 50%;
@@ -25,5 +29,32 @@
       display: block;
       max-height: ($mq-small + $mq-xsmall) / 2;
     }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4em 1em;
+
+    @media (min-width: $mq-small) {
+      padding: 6em 2em;
+    }
+
+    @media (min-width: $mq-xlarge) {
+      padding: {
+        top: 8em;
+        bottom: 8em;
+      }
+    }
+  }
+
+  &__text {
+    margin: {
+      top: 0.5em;
+      bottom: 0;
+    }
+
+    font-size: 1.5em;
   }
 }

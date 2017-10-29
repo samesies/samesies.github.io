@@ -58,6 +58,7 @@
 //----------------------------------------------   
 // Components
 //---------------------------------------------- 
+@import 'components/_directory';
 @import 'components/_featured';
 @import 'components/_half';
 @import 'components/_image';
@@ -71,6 +72,5 @@
 //---------------------------------------------- 
 @import 'utils/_animations-keyframes';
 @import 'utils/_decor';
-@import 'utils/_helpers-color';
 @import 'utils/_helpers-grid';
 @import 'utils/_page-transitions';

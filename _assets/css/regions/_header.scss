@@ -50,7 +50,25 @@
     }
   }
 
-  &__link {
+  &__link:not(.active) {
+    @include strikethrough();
+  }
+
+  &__link.active {
+    position: relative;
+
     color: $color-black;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      height: 2px;
+      width: 100%;
+
+      background-color: $color-alpha;
+    }
   }
 }

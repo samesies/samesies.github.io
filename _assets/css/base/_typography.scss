@@ -61,6 +61,14 @@ h6 {
   font-weight: 500;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
 //----------------------------------------------
 // Paragraphs
 //---------------------------------------------- 
@@ -72,71 +80,10 @@ p {
 }
 
 //----------------------------------------------
-// Blockquote
-//---------------------------------------------- 
-q,
-blockquote {
-  margin: 1.25rem 0 2rem;
-
-  font-family: $font;
-  font-weight: 400;
-  font-size: 1.25em;
-  color: $color-black;
-  line-height: 1.4;
-
-  @media (min-width: $mq-small) {
-    font-size: 1.5em;
-    margin: {
-      top: 1.75rem;
-      bottom: 2.5rem;
-    }
-  }
-}
-
-cite {
-  display: block;
-
-  font-family: $font;
-  font-weight: 500;
-  font-size: $font-xxxsmall;
-  font-style: normal;
-  color: $color-black;
-
-  // &:before {
-  //   content: "\2014 \0020";
-  // }
-}
-
-//----------------------------------------------
 // Misc
 //---------------------------------------------- 
 strong {
-  @extend %letter-spacing;
-}
-
-small {
-  font-size: $font-xsmall;
-}
-
-strong {
-  font-weight: 700;
-}
-
-sup,
-sub {
-  font-size: $font-xxsmall;
-}
-
-sup {
-  top: -0.75em;
-}
-
-sub {
-  bottom: -0.75em;
-}
-
-mark {
-  color: $color-black;
+  font-weight: 500;
 }
 
 //----------------------------------------------
