@@ -1,8 +1,8 @@
 // ----------------------------------------------
-// Requires
+// Imports
 // ----------------------------------------------
-//= require components/_pageTransition
-//= require vendor/_tinySlider
+import tns from './vendor/_tinySlider.js';
+import PageTransition from './components/_pageTransition.js';
 
 // ----------------------------------------------
 // Inits

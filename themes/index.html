@@ -22,7 +22,7 @@ image:
             {% for image in theme.images %}
               <div class="themes__subcontainer">
                 <figure class="themes__img">
-                  <img src="{% asset_path '{{ image }}' %}" alt=""/>
+                  <img src="{{ image }}" alt=""/>
                 </figure>
               </div>
             {% endfor %}

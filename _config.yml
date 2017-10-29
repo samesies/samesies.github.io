@@ -14,23 +14,16 @@ default_img: https://source.unsplash.com/oBb-Y26PJgg/1600x900
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-assets
   - jekyll-sitemap
-assets:
-  autoprefixer:
-    browsers:
-      - "last 2 versions"
-      - "IE > 9"
-  compress:
-    css: sass
-    js: uglifier
-  sources:
-    - _assets/css
-    - _assets/images
-    - _assets/js
+  - octopress-autoprefixer
+sass:
+  style: compressed
 exclude:
+  - node_modules
   - Gemfile
   - Gemfile.lock
+  - gulpfile.js
+  - package.json
 
 # Collections
 collections:
