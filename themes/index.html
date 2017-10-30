@@ -22,7 +22,7 @@ image:
             {% for image in theme.images %}
               <div class="themes__subcontainer">
                 <figure class="themes__img">
-                  <img src="{{ image }}" alt=""/>
+                  <img src="{{ image }}" alt="{{ theme.title }}"/>
                 </figure>
               </div>
             {% endfor %}
@@ -31,7 +31,7 @@ image:
             {% for image in theme.images limit:1 %}
               <div class="themes__subcontainer">
                 <figure class="themes__img">
-                  <img src="{{ image }}" alt=""/>
+                  <img src="{{ image }}" alt="{{ theme.title }}"/>
                 </figure>
               </div>
             {% endfor %}
