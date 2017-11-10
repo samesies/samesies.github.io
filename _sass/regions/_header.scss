@@ -3,6 +3,7 @@
 //---------------------------------------------- 
 .header {
   display: flex;
+  align-items: center;
   width: 100%;
   padding: 1em;
 
@@ -44,17 +45,15 @@
     }
   }
 
-  &__img {
-    height: 3em;
-    width: 3em;
+  &__title {
+    font-family: $font-title;
+    font-size: 1.5em;
+    color: $color-alpha;
 
-    @media (min-width: $mq-small) {
-      height: 4em;
-      width: 4em;
-    }
+    span {
+      display: inline-block;
 
-    img {
-      display: block;
+      transform: scale(-1, 1);
     }
   }
 
