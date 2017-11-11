@@ -50,10 +50,18 @@
     font-size: 1.5em;
     color: $color-alpha;
 
+    &:hover {
+
+      span {
+        transform: scale(1);
+      }
+    }
+
     span {
       display: inline-block;
 
       transform: scale(-1, 1);
+      transition: transform 200ms ease-in-out;
     }
   }
 
