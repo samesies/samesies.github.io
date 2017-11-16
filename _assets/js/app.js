@@ -3,7 +3,6 @@
 // ----------------------------------------------
 import tns from './vendor/_tinySlider.js';
 import PageTransition from './components/_pageTransition.js';
-import PleaseDontGo from './components/_pleaseDontGo.js';
 
 // ----------------------------------------------
 // Inits
@@ -22,5 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inits
   PageTransition.init();
-  PleaseDontGo.init();
 });
