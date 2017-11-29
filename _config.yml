@@ -15,9 +15,6 @@ default_img: http://samesies.io/assets/images/seo.jpg
 markdown: kramdown
 gems:
   - jekyll-sitemap
-  - octopress-autoprefixer
-sass:
-  style: compressed
 exclude:
   - node_modules
   - .DS_Store

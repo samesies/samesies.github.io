@@ -21,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inits
   PageTransition.init();
+  
 });
