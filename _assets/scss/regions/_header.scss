@@ -3,9 +3,41 @@
 //---------------------------------------------- 
 .header {
   position: fixed;
-  top: 2em;
-  left: 2em;
+  top: 0;
+  left: 0;
   z-index: $z-999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: {
+    top: 2em;
+    right: 2em;
+    left: 2em;
+  }
+
+  &__title {
+    font-family: $font-title;
+    font-size: 1.5em;
+    color: $color-beta;
+
+    &:hover {
+
+      span {
+        transform: scale(1);
+        transition: transform 300ms ease-in-out;
+      }
+    }
+
+    span {
+      display: inline-block;
+
+      line-height: 100%;
+      transform: scale(-1, 1);
+      transition: transform 150ms ease-in-out;
+    }
+  }
 }
 
 //----------------------------------------------
@@ -21,8 +53,12 @@
     height: 2px;
     width: 34px;
 
-    background-color: $color-alpha;
+    background-color: $color-beta;
     transition: all 200ms ease-in-out;
+
+    #home & {
+      background-color: $color-alpha;
+    }
 
     &:nth-of-type(2) {
       margin: {

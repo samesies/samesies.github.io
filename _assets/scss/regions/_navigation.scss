@@ -25,6 +25,7 @@
     width: 30%;
 
     background-color: $color-white;
+    box-shadow: 0 2px 50px rgba($color-black, 0.25);
     transform: translate3d(-100%, 0, 0);
     transition: transform 200ms ease-in-out 200ms;
 

@@ -1,9 +1,13 @@
 //----------------------------------------------
-// Featured
+// Form
 //---------------------------------------------- 
-.featured {
+.form {
   min-height: 100vh;
   margin-left: 45%;
+  padding: {
+    top: 12vw;
+    right: 24vw;
+  }
   
   background-color: $color-alpha;
 }

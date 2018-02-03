@@ -5,6 +5,13 @@
     <div></div>
     <div></div>
   </div>
+  {% if page.url != '/' %}
+    <div>
+      <a class="header__title" href="{{ '/' | prepend: site.baseurl }}">
+        samesie<span>s</span>
+      </a>
+    </div>
+  {% endif %}
 </header>
 
 <!-- Navigation -->
