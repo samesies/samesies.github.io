@@ -1,0 +1,41 @@
+//----------------------------------------------
+// Intro
+//---------------------------------------------- 
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 50%;
+  padding: 10vw 8vw;
+
+  background-color: $color-beta;
+
+  &__logo {
+    font-family: $font-title;
+    font-size: 2.5em;
+    line-height: 1;
+    color: $color-alpha;
+
+    span {
+      display: inline-block;
+
+      line-height: 100%;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &__text {
+    margin: {
+      top: 0.75em;
+      bottom: 0;
+    }
+
+    font-family: $font-title;
+    font-size: 1.25em;
+  }
+}

@@ -1,33 +1,6 @@
 //----------------------------------------------
 // Footer
 //---------------------------------------------- 
-.footer {
-  border-top: 1px solid rgba($color-black, 0.1);
-
-  &__list {
-    @extend %no-list-style;
-
-    display: flex;
-    justify-content: center;
-
-    & > * {
-
-      &:not(:last-child) {
-        margin-right: 1.5em;
-      }
-    }
-  }
-
-  &__link {
-    color: $color-black;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-alpha;
-    }
-  }
-}
 
 //----------------------------------------------
 // Flex based sticky footer
