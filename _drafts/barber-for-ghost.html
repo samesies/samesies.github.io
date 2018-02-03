@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Barber
-date: 2017-12-03
-description: Barber is a minimal blog theme built for Jekyll. The blog theme features a masonry grid, endless scrolling, and page transitions. 💈
+title: Barber for Ghost
+date: 2017-10-23
+description: Barber is a minimal blog theme built for Ghost. The blog theme features a masonry grid, endless scrolling, and page transitions. 💈
 image: /assets/images/barber/barber.jpg
 demo: http://barber.samesies.io/
-purchase: 
+purchase: https://payhip.com/b/4Lz7
 ---
 <!-- Mast -->
 <section class="mast">
@@ -22,6 +22,9 @@ purchase:
       <ul class="directory__list">
         <li>
           <a class="directory__link" href="#installation">Installation</a>
+        </li>
+        <li>
+          <a class="directory__link" href="#enable-beta-features">Enable Beta Features</a>
         </li>
         <li>
           <a class="directory__link" href="#update-settings">Update Settings</a>
@@ -70,6 +73,11 @@ purchase:
       <p>Ghost requires the theme to be uploaded in a <code>.zip</code> file. You will need to do this whenever you make any edit to the source code. You can run <code>gulp zip</code> in your command line to generate this file without all the extra folders Ghost does not need (see <a href="#source-code">Source Code</a> for more information about Gulp).</p>
       {% include screen.html image="/assets/images/barber/doc/installation.jpg" %}
     </div>
+    <div id="enable-beta-features" class="post-doc__container">
+      <h3 class="post-doc__title">Enable Beta Features</h3>
+      <p>Barber uses a couple of features that are still in beta testing. You must activate the <strong>Public API</strong> and the <strong>Subscribers</strong> features. These features make tag pages, endless scrolling, and a subscription list possible.</p>
+      {% include screen.html image="/assets/images/barber/doc/beta-features.jpg" %}
+    </div>
     <div id="update-settings" class="post-doc__container">
       <h3 class="post-doc__title">Update Settings</h3>
       {% include screen.html image="/assets/images/barber/doc/update-settings.jpg" %}
@@ -95,15 +103,15 @@ purchase:
 
       {% include screen.html image="/assets/images/barber/cropped/contact-notebook.jpg" %}
 
-      <p>You do have to set the email address where you want to receive the form (you can even set the subject too). This file can be found in <code>_includes/formspree.html</code>. After everything is set you will need to submit a message yourself to confirm the email address is correct.</p>
+      <p>You do have to set the email address where you want to receive the form (you can even set the subject too). This file can be found in <code>partials/formspree.hbs</code>. After everything is set you will need to submit a message yourself to confirm the email address is correct.</p>
     </div>
     <div id="social-media-links" class="post-doc__container">
       <h3 class="post-doc__title">Social Media Links</h3>
-      <p><a href="http://fontawesome.io/" target="_blank">Font Awesome</a> is used for the social media icons. The icons in the theme can be found in <code>_includes/share.html</code> and <code>_includes/social.html</code>. The icons in <code>_includes/share.html</code> do not need to be edited unless you want to remove a certain website; however, the ones in <code>_includes/social.hbs</code> do have to be changed. You can follow the template that has been provided for you to link to all of your social media accounts. The naming convention has not changed from the instructions provided on Font Awesome.</p>
+      <p><a href="http://fontawesome.io/" target="_blank">Font Awesome</a> is used for the social media icons. The icons in the theme can be found in <code>partials/share.hbs</code> and <code>partials/social.hbs</code>. The icons in <code>partials/share.hbs</code> do not need to be edited unless you want to remove a certain website; however, the ones in <code>partials/social.hbs</code> do have to be changed. You can follow the template that has been provided for you to link to all of your social media accounts. The naming convention has not changed from the instructions provided on Font Awesome.</p>
     </div>
     <div id="disqus-comments" class="post-doc__container">
       <h3 class="post-doc__title">Disqus Comments</h3>
-      <p>Comments can be enabled on every blog post in three steps. The first step is to register your website with <a href="https://disqus.com/" target="_blank">Disqus</a>. Disqus will provide you with a shortname that you need for the next step. Once you have that the second step is to open <code>_includes/disqus.html</code>, remove all the instructions, and paste in your shortcode where the placeholder one currently is. The third step is to visit a blog post and verify that your comments are there.</p>
+      <p>Comments can be enabled on every blog post in three steps. The first step is to register your website with <a href="https://disqus.com/" target="_blank">Disqus</a>. Disqus will provide you with a shortname that you need for the next step. Once you have that the second step is to open <code>partials/disqus.hbs</code>, remove all the instructions, and paste in your shortcode where the placeholder one currently is. The third step is to visit a blog post and verify that your comments are there.</p>
     </div>
   </div>
 </section>
@@ -117,51 +125,22 @@ purchase:
       <pre>
         <code>
 .
-├── _assets
-|   ├── js
-|       ├── components
-|       ├── vendor
-|       ├── _inits.js
-|       └── app.js
-|   └── scss
-|       ├── base
-|       ├── components
-|       ├── fonts
-|       ├── regions
-|       ├── tools
-|       ├── utils
-|       ├── vendor
-|       ├── amp.scss
-|       └── app.scss
-├── _includes
-|   ├── contact.html
-|   ├── disqus.html
-|   ├── footer.html
-|   ├── formspree.html
-|   ├── head.html
-|   ├── header.html
-|   ├── navigation.html
-|   ├── pagination.html
-|   ├── post-card.html
-|   ├── share.html
-|   ├── social.html
-|   └── subscribe-form.html
-├── _layouts
-|   ├── compress.html
-|   ├── default.html
-|   ├── page.html
-|   ├── post.html
-|   └── tag.hbs
-├── _plugins
-|   ├── tags_list.rb
-|   └── tags_pagination.rb
-├── _posts
-|   └── 2017-10-03-barber-for-jekyll.md
-├── _site
 ├── assets
-|   ├── css
-|   ├── images
 |   └── js
+├── partials
+|   ├── disqus.hbs
+|   ├── footer.hbs
+|   ├── formspree.hbs
+|   ├── head.hbs
+|   ├── header.hbs
+|   ├── navigation.hbs
+|   ├── pagination.hbs
+|   ├── post-card.hbs
+|   ├── share.hbs
+|   ├── social.hbs
+|   ├── styles-amp.hbs
+|   ├── styles-app.hbs
+|   └── subscribe_form.hbs
 ├── src
 |   ├── js
 |       ├── components
@@ -180,16 +159,19 @@ purchase:
 ├── .eslintrc
 ├── .gitignore
 ├── .stylelintrc
-├── 404.html
-├── _config.yml
-├── Gemfile
-├── Gemfile.lock
+├── amp.hbs
+├── author.hbs
+├── default.hbs
+├── error-404.hbs
+├── error.hbs
 ├── gulpfile.js
-├── index.html
+├── index.hbs
 ├── package.json
-├── README.md
-├── style-guide.html
-└── subscribe.html
+├── page-contact.hbs
+├── page.hbs
+├── post.hbs
+├── subscribe.hbs
+└── tag.hbs
         </code>
       </pre>
       <p>The CSS is written in Sass and compiled in two different files. One for the whole website and one for Google AMP pages. The JavaScript is written in ES6, so your code is up to date with the newest standards. This theme does not have jQuery, so you are saving every visitor from downloading that script.</p>

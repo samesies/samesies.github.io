@@ -1,12 +1,14 @@
 # Site settings
 email: okay@samesies.io
 baseurl: ""
+paginate: 12
+paginate_path: "/page/:num"
 google_analytics: UA-108910009-1
 
 name: Thomas Vaeth
 title: Samesies
 description: >
-  Samesies is a web development agency started by Thomas Vaeth and based in Seattle, WA. We create minimal themes for Ghost, Jekyll, and WordPress. 👨‍💻👩‍💻
+  Samesies is a web development agency started by Thomas Vaeth and based in Seattle, WA. We create minimal themes for Gatsby, Ghost, Jekyll, and WordPress. 👨‍💻👩‍💻
 url: "http://samesies.io"
 twitter_username: thomasvaeth
 default_img: http://samesies.io/assets/images/seo.jpg
@@ -14,7 +16,12 @@ default_img: http://samesies.io/assets/images/seo.jpg
 # Build settings
 markdown: kramdown
 gems:
+  - jekyll-paginate
   - jekyll-sitemap
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
 exclude:
   - node_modules
   - .DS_Store

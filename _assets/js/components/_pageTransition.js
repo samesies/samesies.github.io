@@ -10,6 +10,7 @@ const PageTransition = (() => {
       return {
         transitionLinks: document.querySelectorAll(`a[href^="http://${top.location.host.toString()}"]:not(${noTransition}), a[href^="/"]:not(${noTransition}), a[href^="./"]:not(${noTransition}), a[href^="../"]:not(${noTransition})`),
         body: document.body,
+        window: window,
         exit: 400,
         entrance: 200
       };
@@ -29,6 +30,7 @@ const PageTransition = (() => {
     bindEvents() {
       this.loadingClasses();
       this.transitionPage();
+      this.safari();
     },
 
     loadingClasses() {
@@ -53,6 +55,14 @@ const PageTransition = (() => {
             window.location = linkLocation;
           }, s.exit);
         });
+      });
+    },
+
+    safari() {
+      s.window.addEventListener('pageshow', e => {
+        if (e.persisted) {
+          s.window.location.reload();
+        }
       });
     }
   };
