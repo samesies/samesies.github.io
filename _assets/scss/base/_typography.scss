@@ -2,10 +2,11 @@
 // Base typography
 //---------------------------------------------- 
 body {
-  font-family: $font;
+  font-family: $font-body;
+  font-smoothing: antialiased;
   line-height: $base-lineheight;
   color: $color-beta;
-  background-color: $color-alpha;
+  background-color: $color-white;
 }
 
 //----------------------------------------------
@@ -57,7 +58,7 @@ h6 {
     bottom: 0;
   }
 
-  font-family: $font;
+  font-family: $font-header;
   font-weight: 500;
 }
 
@@ -91,6 +92,6 @@ strong {
 //---------------------------------------------- 
 ::selection {
   color: $color-white;
-  background: $color-alpha;
+  background: $color-beta;
   text-shadow: none;
 }

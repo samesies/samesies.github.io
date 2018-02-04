@@ -11,8 +11,9 @@
 //----------------------------------------------
 // Fonts
 //----------------------------------------------
-$font: "Sofia", sans-serif;
 $font-title: "ITC Clearface", serif;
+$font-header: "Rubik", sans-serif;
+$font-body: "Marcellus", serif;
 
 //----------------------------------------------
 // Fonts: Lineheight
@@ -50,12 +51,13 @@ $mq-xxxlarge: 130em;
 //---------------------------------------------- 
 $color-alpha: #ef4434;
 $color-beta: #d5c5c8;
+$color-gamma: #5b2333;
 
 $color-white: #fff;
 $color-lightgrey: #f8f8f8;
 $color-grey: #bbb;
 $color-darkgrey: #aaa;
-$color-black: #272727;
+$color-black: #000;
 
 //----------------------------------------------
 // Z-indexes

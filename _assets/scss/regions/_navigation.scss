@@ -10,7 +10,7 @@
   height: 100%;
   width: 100%;
 
-  background-color: rgba($color-black, 0.75);
+  background-color: rgba($color-gamma, 0.25);
   visibility: hidden;
   opacity: 0;
   transition: all 200ms ease-in-out;
@@ -21,16 +21,40 @@
   }
 
   &__container {
+    position: relative;
+
     height: 100%;
     width: 30%;
 
-    background-color: $color-white;
-    box-shadow: 0 2px 50px rgba($color-black, 0.25);
+    background-color: $color-gamma;
+    box-shadow: 0 2px 50px rgba($color-gamma, 0.75);
     transform: translate3d(-100%, 0, 0);
     transition: transform 200ms ease-in-out 200ms;
 
     .js-nav & {
       transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__emoji {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: {
+      right: 2em;
+      bottom: 1em;
+      left: 2em;
+    }
+
+    & > span {
+      display: block;
+
+      font-size: 2em;
     }
   }
 }
