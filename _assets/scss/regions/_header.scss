@@ -89,6 +89,7 @@
   &.js-hamburger {
 
     & > div {
+      background-color: $color-alpha;
 
       &:nth-of-type(1) {
         transform: translateY(7px) rotate(45deg);
