@@ -8,11 +8,11 @@ layout: compress
   {% include head.html %}
 
 </head>
-<body id="{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}" class="{{ page.layout | downcase }}-layout">
+<body class="{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %} {{ page.layout | downcase }}-layout">
     
   {% include header.html %}
 
-  <main class="👯">
+  <main>
 
     {{ content }}
 

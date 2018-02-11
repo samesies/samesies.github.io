@@ -56,8 +56,8 @@
     background-color: $color-beta;
     transition: all 200ms ease-in-out;
 
-    #home & {
-      background-color: $color-alpha;
+    .home & {
+      background-color: $color-gamma;
     }
 
     &:nth-of-type(2) {

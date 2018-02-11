@@ -4,6 +4,13 @@
 .featured {
   min-height: 100vh;
   margin-left: 45%;
-  
+  padding: 6vw 8vw;
+
   background-color: $color-alpha;
+
+  &__header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }

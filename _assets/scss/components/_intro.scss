@@ -16,18 +16,15 @@
   }
 
   &--top {
-    padding-top: 12vw;
+    padding-top: 10vw;
   }
 
   &--bottom {
     justify-content: flex-end;
-    padding-bottom: 12vw;
+    padding-bottom: 10vw;
   }
 
-  &__header {
-    font-family: $font-title;
-    font-size: 2.5em;
-    line-height: 1;
+  &__title {
 
     span {
       display: inline-block;
