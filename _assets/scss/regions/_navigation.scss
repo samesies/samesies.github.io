@@ -1,0 +1,80 @@
+//----------------------------------------------
+// Navigation
+//---------------------------------------------- 
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-998;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba($color-gamma, 0.25);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease-in-out 100ms;
+
+  .js-nav & {
+    visibility: visible;
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+  }
+
+  &__container {
+    position: relative;
+
+    height: 100%;
+    width: 30%;
+    padding: 5em 2em 1em;
+
+    background-color: $color-gamma;
+    box-shadow: 0 2px 50px rgba($color-gamma, 0.75);
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 200ms ease-in-out;
+
+    .js-nav & {
+      transform: translate3d(0, 0, 0);
+      transition: transform 200ms ease-in-out 200ms;
+    }
+  }
+
+  &__list {
+    @extend %no-list-style;
+
+    & > li:not(:last-child) {
+      margin-bottom: 0.125em;
+    }
+  }
+
+  &__link {
+    font-size: 2em;
+    color: $color-alpha;
+  }
+
+  &__emoji {
+    position: fixed;
+    left: 2em;
+    bottom: 1em;
+    right: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > span {
+      display: block;
+
+      &:nth-of-type(odd) {
+        font-size: 2em;
+      }
+
+      &:nth-of-type(even) {
+        @extend %letter-spacing;
+
+        font-family: $font-header;
+        font-size: $font-xxsmall;
+      }
+    }
+  }
+}

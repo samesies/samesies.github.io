@@ -1,0 +1,44 @@
+//----------------------------------------------
+// Intro
+//---------------------------------------------- 
+.intro {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    padding: {
+      right: 8vw;
+      bottom: 10vw;
+      left: 8vw;
+    }
+
+    @media (min-width: $mq-small) {
+      width: 55%;
+    }
+
+    @media (min-width: $mq-med) {
+      width: 45%;
+    }
+  }
+
+  &__title {
+
+    span {
+      display: inline-block;
+
+      line-height: 100%;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &__text {
+    margin: {
+      top: 0.75em;
+      bottom: 0;
+    }
+
+    font-size: 1.25em;
+  }
+}

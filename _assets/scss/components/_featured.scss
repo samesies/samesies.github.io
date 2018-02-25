@@ -2,20 +2,15 @@
 // Featured
 //---------------------------------------------- 
 .featured {
-  background-color: $color-lightgrey;
+  min-height: 100vh;
+  margin-left: 45%;
+  padding: 6vw 8vw;
 
-  &__link {
-    display: block;
-  }
+  background-color: $color-alpha;
 
-  &__img {
-
-    img {
-      @extend %auto-margin;
-
-      display: block;
-      width: 100%;
-      max-width: $mq-med;
-    }
+  &__header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }

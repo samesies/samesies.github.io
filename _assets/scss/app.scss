@@ -36,42 +36,45 @@
 //----------------------------------------------   
 // Base
 //---------------------------------------------- 
-@import 'base/_buttons';
-@import 'base/_code';
-@import 'base/_forms';
-@import 'base/_links';
-@import 'base/_lists';
-@import 'base/_media';
+// @import 'base/_buttons';
+// @import 'base/_code';
+// @import 'base/_forms';
+// @import 'base/_links';
+// @import 'base/_lists';
+// @import 'base/_media';
 @import 'base/_typography';
 
 //----------------------------------------------   
 // Vendor
 //----------------------------------------------  
-@import 'vendor/_tiny-slider';
 
 //----------------------------------------------
 // Regions
 //---------------------------------------------- 
 @import 'regions/_footer';
-@import 'regions/_header';
+// @import 'regions/_header';
+// @import 'regions/_navigation';
 
 //----------------------------------------------   
 // Components
 //---------------------------------------------- 
-@import 'components/_about';
-@import 'components/_directory';
-@import 'components/_featured';
-@import 'components/_half';
-@import 'components/_image';
-@import 'components/_mast';
-@import 'components/_post';
-@import 'components/_screen';
-@import 'components/_themes';
+// @import 'components/_about';
+// @import 'components/_directory';
+// @import 'components/_featured';
+// @import 'components/_form';
+// @import 'components/_half';
+// @import 'components/_image';
+@import 'components/_intro';
+// @import 'components/_mast';
+// @import 'components/_post';
+// @import 'components/_screen';
+// @import 'components/_themes';
 
 //----------------------------------------------   
 // Utils
 //---------------------------------------------- 
-@import 'utils/_animations-keyframes';
-@import 'utils/_decor';
-@import 'utils/_helpers-grid';
+// @import 'utils/_animations-keyframes';
+// @import 'utils/_decor';
+// @import 'utils/_helpers-grid';
+@import 'utils/_helpers';
 @import 'utils/_page-transitions';

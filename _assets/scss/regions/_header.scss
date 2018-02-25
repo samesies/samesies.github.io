@@ -2,53 +2,25 @@
 // Header
 //---------------------------------------------- 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-999;
+
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 1em;
-
-  @media (max-width: $mq-small) {
-    flex-direction: column;
-  }
-
-  @media (max-width: $mq-med) {
-    justify-content: space-between;
-  }
-
-  @media (min-width: $mq-small) {
-    padding: {
-      right: 2em;
-      left: 2em;
-    }
-  }
-
-  & > * {
-
-    @media (max-width: $mq-small) {
-
-      &:last-child {
-        padding-top: 0.5em;
-      }
-    }
-    
-    @media (min-width: $mq-med) {
-      flex-basis: 50%;
-      max-width: 50%;
-
-      &:first-child {
-        padding-right: 0.5em;
-      }
-
-      &:last-child {
-        padding-left: 0.5em;
-      }
-    }
+  padding: {
+    top: 2em;
+    right: 2em;
+    left: 2em;
   }
 
   &__title {
     font-family: $font-title;
     font-size: 1.5em;
-    color: $color-alpha;
+    color: $color-beta;
 
     &:hover {
 
@@ -66,49 +38,71 @@
       transition: transform 150ms ease-in-out;
     }
   }
+}
 
-  &__list {
-    @extend %no-list-style;
+//----------------------------------------------
+// Hamburger
+//---------------------------------------------- 
+.hamburger {
+  height: 17px;
+  width: 34px;
 
-    display: flex;
-    align-items: center;
+  cursor: pointer;
 
-    & > * {
+  & > div {
+    height: 2px;
+    width: 34px;
 
-      &:not(:last-child) {
-        margin-right: 1em;
+    background-color: $color-beta;
+    transition: all 200ms ease-in-out;
 
-        @media (min-width: $mq-small) {
-          margin-right: 1.5em;
-        }
+    .home & {
+      background-color: $color-gamma;
+    }
+
+    &:nth-of-type(2) {
+      margin: {
+        top: 5px;
+        bottom: 5px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 25px;
+    }
+  }
+
+  &:hover {
+
+    & > div {
+
+      &:nth-of-type(2) {
+        width: 25px;
+      }
+
+      &:nth-of-type(3) {
+        width: 34px;
       }
     }
   }
 
-  &__link {
-    color: $color-black;
+  &.js-hamburger {
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-alpha;
-    }
+    & > div {
+      background-color: $color-alpha;
 
-    &.active {
-      position: relative;
+      &:nth-of-type(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
 
-      color: $color-alpha;
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
 
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -0.1rem;
+      &:nth-of-type(3) {
+        width: 34px;
 
-        height: 2px;
-        width: 100%;
-
-        background-color: $color-alpha;
+        transform: translateY(-7px) rotate(-45deg);
       }
     }
   }

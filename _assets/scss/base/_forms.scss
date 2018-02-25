@@ -1,67 +1,48 @@
-// //----------------------------------------------
-// // Forms
-// //---------------------------------------------- 
-// form {
-//   display: flex;
-//   justify-content: center;
-//   width: 100%;
-// }
+//----------------------------------------------
+// Inputs
+//---------------------------------------------- 
+input,
+textarea {
+  @extend %letter-spacing;
+  @extend %text-center;
 
-// //----------------------------------------------
-// // Inputs
-// //---------------------------------------------- 
-// input,
-// textarea {
-//   display: block;
-//   width: 100%;
-//   max-width: 100%;
-//   padding: 0.75em 0.5em;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2em;
+  padding: 1em 0.5em;
 
-//   font-family: $font;
-//   font-size: $font-small;
-//   font-weight: 400;
-//   color: $color-black;
-//   background: transparent;
-//   border: 2px solid rgba($color-black, 0.6);
-//   border-radius: 0;
-//   box-shadow: none;
-//   outline: 0;
-//   -webkit-appearance: none;
-//   transition: border-color 200ms ease-in-out;
+  font-family: $font-header;
+  font-weight: 700;
+  color: $color-beta;
+  background: transparent;
+  border: 3px solid $color-beta;
+  border-radius: 0;
+  box-shadow: none;
+  outline: 0;
+  -webkit-appearance: none;
+  transition: border-color 200ms ease-in-out;
 
-//   &:hover,
-//   &:focus {
-//     border-color: $color-black;
-//   }
-// }
+  &:focus {
+    border-color: $color-beta;
+  }
+}
 
-// input[type="submit"] {
-//   position: relative;
-//   z-index: $z-1;
+textarea {
+  resize: vertical;
+}
 
-//   cursor: pointer;
-// }
+input[type="submit"] {
+  margin-bottom: 0;
 
-// //----------------------------------------------
-// // Labels
-// //---------------------------------------------- 
-// label {
-//   display: block;
+  color: $color-alpha;
+  background-color: $color-beta;
+  cursor: pointer;
+}
 
-//   font-size: $font-small;
-// }
-
-// //----------------------------------------------
-// // Misc
-// //---------------------------------------------- 
-// .form-group {
-//   width: 45%;
-//   margin-right: 0.5em;
-// }
-
-// //----------------------------------------------
-// // Placeholders
-// //---------------------------------------------- 
-// ::placeholder {
-//   color: $color-grey;
-// }
+//----------------------------------------------
+// Placeholders
+//---------------------------------------------- 
+::placeholder {
+  color: rgba($color-beta, 0.5);
+}

@@ -2,10 +2,11 @@
 // Base typography
 //---------------------------------------------- 
 body {
-  font-family: $font;
+  font-family: $font-body;
+  font-smoothing: antialiased;
   line-height: $base-lineheight;
-  color: $color-black;
-  background-color: $color-white;
+  color: $color-beta;
+  background-color: $color-alpha;
 }
 
 //----------------------------------------------
@@ -56,17 +57,44 @@ h6 {
     top: 0;
     bottom: 0;
   }
-
-  font-family: $font;
-  font-weight: 500;
 }
 
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-header;
+  font-weight: 700;
+}
+
+//----------------------------------------------
+// H1
+//---------------------------------------------- 
+h1 {
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 3em;
+  line-height: 1;
+}
+
+//----------------------------------------------
+// H2
+//---------------------------------------------- 
 h2 {
-  font-size: 1.5em;
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 2.5em;
 }
 
+//----------------------------------------------
+// H3
+//---------------------------------------------- 
 h3 {
-  font-size: 1.5em;
+  @extend %letter-spacing;
+
+  margin-bottom: 0.25em;
+
+  font-size: $font-xxsmall;
 }
 
 //----------------------------------------------
@@ -80,17 +108,10 @@ p {
 }
 
 //----------------------------------------------
-// Misc
-//---------------------------------------------- 
-strong {
-  font-weight: 500;
-}
-
-//----------------------------------------------
 // Selection
 //---------------------------------------------- 
 ::selection {
   color: $color-white;
-  background: $color-alpha;
+  background: $color-beta;
   text-shadow: none;
 }

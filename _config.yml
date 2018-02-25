@@ -1,8 +1,6 @@
 # Site settings
 email: okay@samesies.io
 baseurl: ""
-paginate: 12
-paginate_path: "/page/:num"
 google_analytics: UA-108910009-1
 
 name: Thomas Vaeth
@@ -16,7 +14,6 @@ default_img: http://samesies.io/assets/images/seo.jpg
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-paginate
   - jekyll-sitemap
 compress_html:
   clippings: all
@@ -30,12 +27,3 @@ exclude:
   - Gemfile.lock
   - gulpfile.js
   - package.json
-
-# Collections
-collections:
-  themes:
-    output: true
-    permalink: "/themes/:path"
-  documentation:
-    output: true
-    permalink: "/documentation/:path"
